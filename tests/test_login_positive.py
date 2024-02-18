@@ -1,10 +1,16 @@
 import pytest
-from selenium import webdriver
 
-class TestPositiveLogin():
+from page_objects.login_page import LoginPage
+
+
+class TestPositiveLogin:
     @pytest.mark.positive
-    def test_login_positive(self):
-        __url = "https://practice.expandtesting.com/login"
+    def test_login_positive(self, driver):
+        # Create a login obj
+        login = LoginPage(driver)
 
-        browser = webdriver.Chrome()
-        browser.get(__url)
+        # Open url
+        login.open()
+
+
+
