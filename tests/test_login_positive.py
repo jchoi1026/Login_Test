@@ -11,6 +11,3 @@ class TestPositiveLogin:
 
         # Open url
         login.open()
-
-
-
